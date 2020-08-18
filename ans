@@ -1,4 +1,5 @@
 https://www.db-fiddle.com/f/ecyEErXyBCpHas7yVe8aPM/2
 
-select min(sqrt((p2.x-p1.x)*(p2.x-p1.x) + (p2.y-p1.y)*(p2.y-p1.y)))
+select round(min(sqrt((p2.x-p1.x)*(p2.x-p1.x) + (p2.y-p1.y)*(p2.y-p1.y))),2)
 from point_2d p1, point_2d p2
+where p1.x != p2.x OR p1.y != p2.y
